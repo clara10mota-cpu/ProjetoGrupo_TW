@@ -110,11 +110,11 @@ body {
   border-radius: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
 }
 
 /* EFEITO HOVER */
 .recipe-card:hover {
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
