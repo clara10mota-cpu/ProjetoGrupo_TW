@@ -47,7 +47,7 @@ body {
   color: #d64545;
 }
 
-/* User icon */
+/* bonequinh user */
 .user-circle {
   width: 44px;
   height: 44px;
@@ -95,7 +95,7 @@ body {
   max-width: 100%;
 }
 
-/* CONTAINER DOS CARTÕES */
+/* cartões */
 .footer-recipes {
   display: flex;
   justify-content: center;
@@ -104,7 +104,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* CARTÃO */
+/* cartão */
 .recipe-card {
   width: 260px;
   border-radius: 20px;
@@ -113,12 +113,11 @@ body {
   padding: 10px;
 }
 
-/* EFEITO HOVER */
+/* efeito hover  */
 .recipe-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* IMAGEM */
 .recipe-card img {
   width: 140px;
   height: 140px;
@@ -127,21 +126,21 @@ body {
   margin-bottom: 15px;
 }
 
-/* TÍTULO */
+
 .recipe-card h3 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-/* TEXTO */
+
 .recipe-card p {
   font-size: 14px;
   color: #666;
   margin-bottom: 15px;
 }
 
-/* BOTÃO */
+
 .recipe-btn {
   background: #e63946;
   color: #fff;
