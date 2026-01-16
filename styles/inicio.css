@@ -1,73 +1,7 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #f4f1ee;
-  overflow-x: hidden;
-}
-
-
-.navbar {
-  width: 100%;
-  padding: 36px 0;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 40px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: #e6e4e3;
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.nav-links {
-  display: flex;
-  gap: 44px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #2f2f2f;
-  font-size: 17px;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: #d64545;
-}
-
-/* bonequinh user */
-.user-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #e6e6e6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.user-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
+/* parte de texto */
 .hero {
-  padding: 60px 10%;
+  padding: 70px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,85 +9,38 @@ body {
 }
 
 .hero-text {
-  max-width: 620px;
+  max-width: 640px;
 }
 
 .hero-text h1 {
-  font-size: 80px;
+  font-size: 78px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.12;
 }
 
 .hero-text p {
-  margin-top: 20px;
+  margin-top: 22px;
   font-size: 16px;
   color: #555;
 }
 
-.hero-image img {
-  width: 420px;
-  max-width: 100%;
+/* carrocel  */
+.hero-carousel {
+  width: 500px;
+  height: 500px;
+  flex-shrink: 0;
 }
 
-/* cartões */
-.footer-recipes {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-  flex-wrap: wrap;
+.hero-carousel .carousel,
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+  width: 100%;
+  height: 100%;
 }
 
-/* cartão */
-.recipe-card {
-  width: 260px;
-  border-radius: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 10px;
-}
-
-/* efeito hover  */
-.recipe-card:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-}
-
-.recipe-card img {
-  width: 140px;
-  height: 140px;
+.hero-carousel img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
-
-
-.recipe-card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-
-.recipe-card p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-
-.recipe-btn {
-  background: #e63946;
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s ease;
-}
-
-.recipe-btn:hover {
-  background: #c72f3b;
-}
-
-
