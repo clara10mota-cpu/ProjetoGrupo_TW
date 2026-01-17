@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="../styles/login.css">
+     <link rel="stylesheet" href="../styles/geral.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+      <!-- NAVBAR -->
+<header class="topbar">
+  <div class="nav-container">
+    <nav class="nav-links">
+      <a href="inicio.html">Home</a>
+      <a href="receitas.html">Receitas</a>
+      <a href="planeador.html">Planeamento de refeições</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+      <a href="utilizador.html" class="user-circle">
+        <img src="../imagens/logo.png" alt="Foto do utilizador">
+      </a>
+    </div>
+  </header>
+  <section class="login-wrap">
+  <div class="login-card">
+    <h1>Criar Conta</h1>
+    <p class="login-sub">
+      Regista-te para guardar receitas e planear as tuas refeições.
+    </p>
+
+    <form class="login-form" action="#" method="post">
+      
+      <div class="field">
+        <label for="name">Nome</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="O teu nome"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="ex: maria@email.com"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="password">Palavra-passe</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="••••••••"
+          required
+          minlength="6"
+        />
+      </div>
+
+      <div class="field">
+        <label for="confirm">Confirmar palavra-passe</label>
+        <input
+          id="confirm"
+          name="confirm"
+          type="password"
+          placeholder="••••••••"
+          required
+          minlength="6"
+        />
+      </div>
+
+      <button class="btn" type="submit">Criar Conta</button>
+
+      <p class="switch">
+        Já tens conta?
+        <a class="link" href="login.html">Voltar ao login</a>
+      </p>
+
+    </form>
+  </div>
+</section>
+</body>
+</html>
+

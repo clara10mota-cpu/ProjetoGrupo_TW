@@ -1,144 +1,315 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/geral.css">
-    <link rel="stylesheet" href="../styles/receitas.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/geral.css">
+  <link rel="stylesheet" href="../styles/receitas.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-      <!-- NAVBAR -->
-  <header class="topbar">
-    <div class="nav-container">
-      <nav class="nav-links">
-        <a href="inicio.html">Home</a>
-        <a href="receitas.html">Receitas</a>
-        <a href="#">Planeamento de refeições</a>
-        <a href="#">Login</a>
+<!-- NAVBAR -->
+<header class="topbar">
+  <div class="nav-container">
+    <nav class="nav-links">
+      <a href="inicio.html">Home</a>
+      <a href="receitas.html">Receitas</a>
+      <a href="planeador.html">Planeamento de refeições</a>
+      <a href="login.html">Login</a>
+    </nav>
 
-      </nav> 
-      
-      <a href="utilizador.html" class="user-circle">
-        <img src="../imagens/logo.png" alt="Foto do utilizador">
-      </a>
-    </div>
-  </header>
-    <!-- CONTEÚDO DA PÁGINA -->
-     <main class="container page">
-        <!-- TÍTULO + PESQUISA -->
-         <section class="page-header">
-            <div class="page-title">
-                <h1>Receitas</h1>
-                <p>Encontra receitas por tempo, dificuldade e preferências.</p>
-            </div>
-            <form class="search" role="search">
-                <input type="search" placeholder="Pesquisar receitas..." />
-                <button type="submit">🔍</button>
-            </form>
-        </section>
-        <!-- FILTROS -->
-         <section class="filters">
-            <div class="filter-group">
-                <label>Tempo</label>
-                <select>
-                    <option>Qualquer</option>
-                    <option>Até 15 min</option>
-                    <option>Até 30 min</option>
-                    <option>Até 60 min</option>
-                </select>
-            </div>
-            
-            <div class="filter-group">
-                <label>Dificuldade</label>
-                <select>
-                    <option>Qualquer</option>
-                    <option>Fácil</option>
-                    <option>Média</option>
-                    <option>Difícil</option>
-                </select>
-            </div>
-            
-            <div class="filter-group">
-                <label>Ordenar</label>
-                <select>
-                    <option>Mais recentes</option>
-                    <option>Mais rápidas</option>
-                </select>
-            </div>
-            
-            <button class="btn-clear">Limpar</button>
-        </section>
-
-         <section class="grid">
-            <article class="card" data-id="1">
-                <img class="card-img" src="./imagens/r1.jpg" alt="Panquecas de aveia">
-                <div class="card-body">
-                    <div class="card-top">
-                        <h2 class="card-title">Panquecas de aveia</h2>
-                        <div class="card-actions">
-                            <button class="icon-btn like-btn">❤️ <span>24</span></button>
-                            <button class="icon-btn save-btn">🔖</button>
-                        </div>
-                    </div>
-                    <div class="meta">
-                        <span class="pill">⏱ 30 min</span>
-                        <span class="pill">🙂 Fácil</span>
-                    </div>
-                    <button class="open-modal">▶ Ver receita</button>
-      </div>
-    </article>
-
-  </section>
-</main>
-<!-- BOTÃO ADICIONAR -->
- <button class="add-recipe-btn"></button>
- <!-- MODAL ADICIONAR -->
-  <div class="modal-overlay" id="add-modal">
-    <div class="modal">
-        <button class="modal-close">✕</button>
-    <h2>Adicionar receita</h2>
-    <form class="add-recipe-form">
-        <input placeholder="Nome da receita">
-        <input type="number" placeholder="Tempo (min)">
-        <select>
-            <option>Fácil</option>
-            <option>Média</option>
-            <option>Difícil</option>
-        </select>
-        <textarea placeholder="Ingredientes"></textarea>
-        <textarea placeholder="Modo de preparação"></textarea>
-        <button type="button" class="btn-primary">Adicionar</button>
-    </form>
-</div>
-</div>
-
-<!-- MODAL RECEITA -->
- <div class="modal-overlay" id="recipe-modal">
-    <div class="modal">
-        <button class="modal-close">✕</button>
-        <img src="./imagens/r1.jpg" alt="Receita">
-        <h2>Panquecas de aveia</h2>
-        <div class="modal-meta">
-            <span class="pill">⏱ 30 min</span>
-            <span class="pill">🙂 Fácil</span>
-        </div>
-        <h3>Ingredientes</h3>
-        <ul><li>1 banana</li></ul>
-        <h3>Modo de preparação</h3>
-        <ul><li>Misturar</li></ul>
+    <a href="utilizador.html" class="user-circle">
+      <img src="../imagens/logo.png" alt="Foto do utilizador">
+    </a>
   </div>
+</header>
+
+<!-- CONTEÚDO -->
+<main class="container page">
+
+  <!-- TÍTULO -->
+  <section class="page-header">
+    <div class="page-title">
+      <h1>Receitas</h1>
+      <p>Encontra receitas por tempo, dificuldade e preferências.</p>
+    </div>
+
+    <form class="search" role="search">
+      <input type="search" placeholder="Pesquisar receitas..." />
+      <button type="submit">🔍</button>
+    </form>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="filters">
+    <div class="filter-group">
+      <label>Tempo</label>
+      <select>
+        <option>Qualquer</option>
+        <option>Até 15 min</option>
+        <option>Até 30 min</option>
+        <option>Até 60 min</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Dificuldade</label>
+      <select>
+        <option>Qualquer</option>
+        <option>Fácil</option>
+        <option>Média</option>
+        <option>Difícil</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Ordenar</label>
+      <select>
+        <option>Mais recentes</option>
+        <option>Mais rápidas</option>
+        <option>Mais popular</option>
+      </select>
+    </div>
+
+    <button class="btn-clear">Limpar</button>
+  </section>
+  
+  <div class="cards">
+
+  <!-- CARTÃO 1 -->
+  <div class="recipe-item">
+    <div class="recipe-image">
+      <img src="../imagens/experimentação.png" alt="Arroz do mar">
+    </div>
+
+    <div class="recipe-card">
+      <h3>Arroz do mar</h3>
+
+      <div class="meta">
+        <span>⏱ 10 min</span>
+        <span class="difficulty">
+          <img src="../imagens/chapeu.png" alt="Fácil">
+          <span>Fácil</span>
+        </span>
+      </div>
+
+      <div class="card-actions">
+        <button class="icon-btn">
+          <img src="../imagens/save.png" alt="Gostar">
+        </button>
+        <button class="icon-btn">❤️</button>
+      </div>
+
+      <button class="open-modal">Ver receita</button>
+    </div>
+  </div>
+
+   <!-- CARTÃO 2-->
+  <div class="recipe-item">
+    <div class="recipe-image">
+      <img src="../imagens/bacalhau broa.png" alt="Arroz do mar">
+    </div>
+
+    <div class="recipe-card">
+      <h3>Bacalhau com broa</h3>
+
+      <div class="meta">
+        <span>⏱ 45 min</span>
+        <span class="difficulty">
+          <img src="../imagens/chapeu.png" alt="Fácil">
+          <span>Médio</span>
+        </span>
+      </div>
+
+      <div class="card-actions">
+        <button class="icon-btn">
+          <img src="../imagens/save.png" alt="Gostar">
+        </button>
+        <button class="icon-btn">❤️</button>
+      </div>
+
+      <button class="open-modal">Ver receita</button>
+    </div>
+  </div>
+   <!-- CARTÃO 3-->
+  <div class="recipe-item">
+    <div class="recipe-image">
+      <img src="../imagens/Arroz.png" alt="Arroz do mar">
+    </div>
+
+    <div class="recipe-card">
+      <h3>Arroz de pato </h3>
+
+      <div class="meta">
+        <span>⏱ 60 min</span>
+        <span class="difficulty">
+          <img src="../imagens/chapeu.png" alt="Fácil">
+          <span>Médio</span>
+        </span>
+      </div>
+
+      <div class="card-actions">
+        <button class="icon-btn">
+          <img src="../imagens/save.png" alt="Gostar">
+        </button>
+        <button class="icon-btn">❤️</button>
+      </div>
+
+      <button class="open-modal">Ver receita</button>
+    </div>
+  </div>
+  <!-- CARTÃO 4-->
+  <div class="recipe-item">
+    <div class="recipe-image">
+      <img src="../imagens/23.png" alt="Arroz do mar">
+    </div>
+
+    <div class="recipe-card">
+      <h3>Lasanha</h3>
+
+      <div class="meta">
+        <span>⏱ 45 min</span>
+        <span class="difficulty">
+          <img src="../imagens/chapeu.png" alt="Fácil">
+          <span>Fácil</span>
+        </span>
+      </div>
+
+      <div class="card-actions">
+        <button class="icon-btn">
+          <img src="../imagens/save.png" alt="Gostar">
+        </button>
+        <button class="icon-btn">❤️</button>
+      </div>
+
+      <button class="open-modal">Ver receita</button>
+    </div>
+  </div>
+   <!-- CARTÃO 5-->
+  <div class="recipe-item">
+    <div class="recipe-image">
+      <img src="../imagens/salmão.png" alt="Arroz do mar">
+    </div>
+
+    <div class="recipe-card">
+      <h3>Salmão no forno </h3>
+
+      <div class="meta">
+        <span>⏱ 35 min</span>
+        <span class="difficulty">
+          <img src="../imagens/chapeu.png" alt="Fácil">
+          <span>Fácil </span>
+        </span>
+      </div>
+
+      <div class="card-actions">
+        <button class="icon-btn">
+          <img src="../imagens/save.png" alt="Gostar">
+        </button>
+        <button class="icon-btn">❤️</button>
+      </div>
+
+      <button class="open-modal">Ver receita</button>
+    </div>
+  </div>
+     <!-- CARTÃO 6-->
+  <div class="recipe-item">
+    <div class="recipe-image">
+      <img src="../imagens/13.png" alt="Arroz do mar">
+    </div>
+
+    <div class="recipe-card">
+      <h3>Strogonoff </h3>
+
+      <div class="meta">
+        <span>⏱ 40 min</span>
+        <span class="difficulty">
+          <img src="../imagens/chapeu.png" alt="Fácil">
+          <span>Fácil</span>
+        </span>
+      </div>
+
+      <div class="card-actions">
+        <button class="icon-btn">
+          <img src="../imagens/save.png" alt="Gostar">
+        </button>
+        <button class="icon-btn">❤️</button>
+      </div>
+
+      <button class="open-modal">Ver receita</button>
+    </div>
+  </div>
+     <!-- CARTÃO 7-->
+  <div class="recipe-item">
+    <div class="recipe-image">
+      <img src="../imagens/carbonara.png" alt="Arroz do mar">
+    </div>
+
+    <div class="recipe-card">
+      <h3>Massa à carbonara</h3>
+
+      <div class="meta">
+        <span>⏱ 20 min</span>
+        <span class="difficulty">
+          <img src="../imagens/chapeu.png" alt="Fácil">
+          <span>Fácil</span>
+        </span>
+      </div>
+
+      <div class="card-actions">
+        <button class="icon-btn">
+          <img src="../imagens/save.png" alt="Gostar">
+        </button>
+        <button class="icon-btn">❤️</button>
+      </div>
+
+      <button class="open-modal">Ver receita</button>
+    </div>
+  </div>
+     <!-- CARTÃO 8-->
+  <div class="recipe-item">
+    <div class="recipe-image">
+      <img src="../imagens/12.png" alt="Arroz do mar">
+    </div>
+
+    <div class="recipe-card">
+      <h3>Cheesecake</h3>
+
+      <div class="meta">
+        <span>⏱ 60 min</span>
+        <span class="difficulty">
+          <img src="../imagens/chapeu.png" alt="Fácil">
+          <span>Médio</span>
+        </span>
+      </div>
+
+      <div class="card-actions">
+        <button class="icon-btn">
+          <img src="../imagens/save.png" alt="Gostar">
+        </button>
+        <button class="icon-btn">❤️</button>
+      </div>
+
+      <button class="open-modal">Ver receita</button>
+    </div>
+  </div>
+
 </div>
-        
-        
+</main>
+
+ <div class="add-recipe-wrapper">
+  <button class="add-recipe-btn">
+    + Adicionar receita
+  </button>
+</div>
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

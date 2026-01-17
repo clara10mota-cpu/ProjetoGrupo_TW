@@ -1,0 +1,90 @@
+.month-carousel {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.planner-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Carrossel */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 40px;
+  padding-bottom: 20px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #8b2f2b;
+  border-radius: 10px;
+}
+
+/* Slide do mês */
+.month-slide {
+  min-width: 100%;
+  background: #f7f4ef;
+  border-radius: 30px;
+  padding: 30px;
+  scroll-snap-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.month-slide h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Dias da semana */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Grelha de dias */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+/* Dia */
+.day {
+  background: white;
+  border-radius: 15px;
+  min-height: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.day-number {
+  font-weight: bold;
+}
+
+/* Botão */
+.add-btn {
+  background: #8b2f2b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
